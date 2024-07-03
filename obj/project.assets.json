@@ -8316,19 +8316,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gerso\\.nuget\\packages\\": {}
+    "C:\\Users\\lsgr0\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\ControlAccess.csproj",
+      "projectUniqueName": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\ControlAccess.csproj",
       "projectName": "ControlAccess",
-      "projectPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\ControlAccess.csproj",
-      "packagesPath": "C:\\Users\\gerso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\obj\\",
+      "projectPath": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\ControlAccess.csproj",
+      "packagesPath": "C:\\Users\\lsgr0\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gerso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lsgr0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8336,6 +8336,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8401,7 +8402,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
