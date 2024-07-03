@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControlAccess.Migrations
 {
     [DbContext(typeof(ControlAccessContext))]
-    [Migration("20240624055131_create18")]
-    partial class create18
+    [Migration("20240703223633_ApplyChanges")]
+    partial class ApplyChanges
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -161,9 +161,7 @@ namespace ControlAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("IdZona")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ResidencialId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("UpdatedBy")
@@ -187,8 +185,6 @@ namespace ControlAccess.Migrations
                     b.HasIndex("IdCalle");
 
                     b.HasIndex("IdZona");
-
-                    b.HasIndex("ResidencialId");
 
                     b.ToTable("Casas");
                 });
@@ -413,7 +409,6 @@ namespace ControlAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ResidencialId")
-                        .HasMaxLength(500)
                         .HasColumnType("int");
 
                     b.Property<string>("UpdatedBy")
@@ -425,7 +420,8 @@ namespace ControlAccess.Migrations
 
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("Id");
 
@@ -489,11 +485,7 @@ namespace ControlAccess.Migrations
 
                     b.HasOne("ControlAccess.Models.Zonas", "Zona")
                         .WithMany()
-                        .HasForeignKey("IdZona");
-
-                    b.HasOne("ControlAccess.Models.Residencial", "Residencial")
-                        .WithMany()
-                        .HasForeignKey("ResidencialId")
+                        .HasForeignKey("IdZona")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -502,8 +494,6 @@ namespace ControlAccess.Migrations
                     b.Navigation("Bloque");
 
                     b.Navigation("Calle");
-
-                    b.Navigation("Residencial");
 
                     b.Navigation("Zona");
                 });

@@ -5,7 +5,7 @@
 namespace ControlAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class M4 : Migration
+    public partial class ApplyChanges : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,6 +25,15 @@ namespace ControlAccess.Migrations
             migrationBuilder.DropColumn(
                 name: "ResidencialId",
                 table: "Casas");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "name",
+                table: "Zonas",
+                type: "nvarchar(500)",
+                maxLength: 500,
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
 
             migrationBuilder.AlterColumn<int>(
                 name: "IdZona",
@@ -51,6 +60,15 @@ namespace ControlAccess.Migrations
             migrationBuilder.DropForeignKey(
                 name: "FK_Casas_Zonas_IdZona",
                 table: "Casas");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "name",
+                table: "Zonas",
+                type: "nvarchar(max)",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(500)",
+                oldMaxLength: 500);
 
             migrationBuilder.AlterColumn<int>(
                 name: "IdZona",

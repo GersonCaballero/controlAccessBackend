@@ -519,3 +519,4 @@ C:\Users\lsgr0\OneDrive\Escritorio\Proyecto-practica\ejemplo\controlAccessBacken
 C:\Users\lsgr0\OneDrive\Escritorio\Proyecto-practica\ejemplo\controlAccessBackend\obj\Debug\net8.0\ControlAccess.pdb
 C:\Users\lsgr0\OneDrive\Escritorio\Proyecto-practica\ejemplo\controlAccessBackend\obj\Debug\net8.0\ControlAccess.genruntimeconfig.cache
 C:\Users\lsgr0\OneDrive\Escritorio\Proyecto-practica\ejemplo\controlAccessBackend\obj\Debug\net8.0\ref\ControlAccess.dll
+C:\Users\gerso\OneDrive\Escritorio\Pases de entrada\ControlAccess\obj\Debug\net8.0\ControlAccess.sourcelink.json
