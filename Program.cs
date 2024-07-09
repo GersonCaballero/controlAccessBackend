@@ -5,6 +5,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ControlAccessContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ControlAccessContext") ?? throw new InvalidOperationException("Connection string 'ControlAccessContext' not found.")));
 
+// Configuración de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -22,6 +34,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Aplicar CORS
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
