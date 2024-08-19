@@ -22,7 +22,8 @@ namespace ControlAccess.Controllers
         // GET: TipoUsuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TipoUsuario.ToListAsync());
+            var tipoUsuario = await _context.TipoUsuario.ToListAsync();
+            return Ok(tipoUsuario);
         }
 
         // GET: TipoUsuarios/Details/5
@@ -40,7 +41,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(tipoUsuario);
+            return Json(tipoUsuario);
         }
 
         // GET: TipoUsuarios/Create
@@ -52,17 +53,16 @@ namespace ControlAccess.Controllers
         // POST: TipoUsuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Identifier,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] TipoUsuario tipoUsuario)
+        [HttpPost]        
+        public async Task<IActionResult> Create([FromBody] TipoUsuario tipoUsuario)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(tipoUsuario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new {message = "TipoUsuarios created successfully"});
             }
-            return View(tipoUsuario);
+            return BadRequest(ModelState);
         }
 
         // GET: TipoUsuarios/Edit/5
@@ -81,16 +81,15 @@ namespace ControlAccess.Controllers
             return View(tipoUsuario);
         }
 
-        // POST: TipoUsuarios/Edit/5
+        // PUT: TipoUsuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Identifier,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] TipoUsuario tipoUsuario)
+        [HttpPut]        
+        public async Task<IActionResult> Edit(int id, [FromBody] TipoUsuario tipoUsuario)
         {
             if (id != tipoUsuario.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de TipoUsuarios.");
             }
 
             if (ModelState.IsValid)
@@ -111,9 +110,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new {message = "TipoUsuarios updated successfully"});
             }
-            return View(tipoUsuario);
+            return BadRequest(tipoUsuario);
         }
 
         // GET: TipoUsuarios/Delete/5
@@ -134,9 +133,8 @@ namespace ControlAccess.Controllers
             return View(tipoUsuario);
         }
 
-        // POST: TipoUsuarios/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: TipoUsuarios/Delete/5
+        [HttpDelete, ActionName("Delete")]        
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var tipoUsuario = await _context.TipoUsuario.FindAsync(id);
@@ -146,7 +144,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "TipoUsuarios Eliminado exitosamente."});
         }
 
         private bool TipoUsuarioExists(int id)

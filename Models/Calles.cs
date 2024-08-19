@@ -16,12 +16,12 @@ namespace ControlAccess.Models
 
         public int ResidencialId { get; set; }
         [ForeignKey("ResidencialId")]
-        public Residencial Residencial { get; set; }
+        public Residencial? Residencial { get; set; }
 
 
         // Campos de auditoría
         public string CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
         public string UpdatedBy { get; set; }
         public DateTime UpdatedDate { get; set; }
     }

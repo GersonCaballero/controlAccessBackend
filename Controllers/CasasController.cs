@@ -22,8 +22,11 @@ namespace ControlAccess.Controllers
         // GET: Casas
         public async Task<IActionResult> Index()
         {
-            var controlAccessContext = _context.Casas.Include(c => c.Avenidas).Include(c => c.Bloque).Include(c => c.Calle).Include(c => c.Zona);
-            return View(await controlAccessContext.ToListAsync());
+            var casas = await _context.Casas.Include(c => c.Avenidas)
+                .Include(c => c.Bloque)
+                .Include(c => c.Calle)
+                .Include(c => c.Zona).ToListAsync();           
+            return Ok(casas);
         }
 
         // GET: Casas/Details/5
@@ -45,7 +48,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(casas);
+            return Json(casas);
         }
 
         // GET: Casas/Create
@@ -54,7 +57,7 @@ namespace ControlAccess.Controllers
             ViewData["IdAvenida"] = new SelectList(_context.Avenidas, "Id", "name");
             ViewData["IdBloque"] = new SelectList(_context.Bloque, "Id", "name");
             ViewData["IdCalle"] = new SelectList(_context.Calles, "Id", "name");
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address");
+            //ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address");
             ViewData["IdZona"] = new SelectList(_context.Zonas, "Id", "name");
             return View();
         }
@@ -63,21 +66,15 @@ namespace ControlAccess.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,name,ResidencialId,IdZona,IdBloque,IdCalle,IdAvenida,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Casas casas)
+        public async Task<IActionResult> Create([FromBody] Casas casas)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(casas);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Entidad casa creada exitosamente" });
             }
-            ViewData["IdAvenida"] = new SelectList(_context.Avenidas, "Id", "name", casas.IdAvenida);
-            ViewData["IdBloque"] = new SelectList(_context.Bloque, "Id", "name", casas.IdBloque);
-            ViewData["IdCalle"] = new SelectList(_context.Calles, "Id", "name", casas.IdCalle);
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address");
-            ViewData["IdZona"] = new SelectList(_context.Zonas, "Id", "name", casas.IdZona);
-            return View(casas);
+            return BadRequest(ModelState);
         }
 
         // GET: Casas/Edit/5
@@ -96,21 +93,20 @@ namespace ControlAccess.Controllers
             ViewData["IdAvenida"] = new SelectList(_context.Avenidas, "Id", "name", casas.IdAvenida);
             ViewData["IdBloque"] = new SelectList(_context.Bloque, "Id", "name", casas.IdBloque);
             ViewData["IdCalle"] = new SelectList(_context.Calles, "Id", "name", casas.IdCalle);
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address");
+            //ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address");
             ViewData["IdZona"] = new SelectList(_context.Zonas, "Id", "name", casas.IdZona);
             return View(casas);
         }
 
-        // POST: Casas/Edit/5
+        // PUT: Casas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,ResidencialId,IdZona,IdBloque,IdCalle,IdAvenida,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Casas casas)
+        [HttpPut]
+        public async Task<IActionResult> Edit(int id, [FromBody] Casas casas)
         {
             if (id != casas.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de la residencial.");
             }
 
             if (ModelState.IsValid)
@@ -131,14 +127,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Entidad casa Actualizada corectamente" } );
             }
-            ViewData["IdAvenida"] = new SelectList(_context.Avenidas, "Id", "name", casas.IdAvenida);
-            ViewData["IdBloque"] = new SelectList(_context.Bloque, "Id", "name", casas.IdBloque);
-            ViewData["IdCalle"] = new SelectList(_context.Calles, "Id", "name", casas.IdCalle);
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address");
-            ViewData["IdZona"] = new SelectList(_context.Zonas, "Id", "name", casas.IdZona);
-            return View(casas);
+            return BadRequest(casas);
         }
 
         // GET: Casas/Delete/5
@@ -163,9 +154,8 @@ namespace ControlAccess.Controllers
             return View(casas);
         }
 
-        // POST: Casas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Casas/Delete/5
+        [HttpDelete, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var casas = await _context.Casas.FindAsync(id);
@@ -175,7 +165,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Casa eliminada exitosamente." });
         }
 
         private bool CasasExists(int id)

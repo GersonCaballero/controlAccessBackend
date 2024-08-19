@@ -21,9 +21,9 @@ namespace ControlAccess.Controllers
 
         // GET: Bloques
         public async Task<IActionResult> Index()
-        {
-            var controlAccessContext = _context.Bloque.Include(b => b.Residencial);
-            return View(await controlAccessContext.ToListAsync());
+        {           
+            var bloque = await _context.Bloque.Include(a=>a.Residencial).ToListAsync();
+            return Ok(bloque);
         }
 
         // GET: Bloques/Details/5
@@ -42,7 +42,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(bloque);
+            return Json(bloque);
         }
 
         // GET: Bloques/Create
@@ -55,18 +55,16 @@ namespace ControlAccess.Controllers
         // POST: Bloques/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Bloque bloque)
+        [HttpPost]        
+        public async Task<IActionResult> Create([FromBody] Bloque bloque)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(bloque);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", bloque.ResidencialId);
-            return View(bloque);
+                return Ok(new { message = "Bloque created successfuly" });
+            }            
+            return BadRequest(ModelState);
         }
 
         // GET: Bloques/Edit/5
@@ -86,16 +84,15 @@ namespace ControlAccess.Controllers
             return View(bloque);
         }
 
-        // POST: Bloques/Edit/5
+        // PUT: Bloques/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Bloque bloque)
+        [HttpPut]    
+        public async Task<IActionResult> Edit(int id, [FromBody] Bloque bloque)
         {
             if (id != bloque.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindando no coincide con el id del bloque");
             }
 
             if (ModelState.IsValid)
@@ -116,10 +113,10 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Bloque  updated successsfuly" });
             }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", bloque.ResidencialId);
-            return View(bloque);
+            
+            return BadRequest(bloque);
         }
 
         // GET: Bloques/Delete/5
@@ -141,9 +138,8 @@ namespace ControlAccess.Controllers
             return View(bloque);
         }
 
-        // POST: Bloques/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Bloques/Delete/5
+        [HttpDelete, ActionName("Delete")]       
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var bloque = await _context.Bloque.FindAsync(id);
@@ -153,7 +149,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Residencial eliminada exitosamente."});
         }
 
         private bool BloqueExists(int id)

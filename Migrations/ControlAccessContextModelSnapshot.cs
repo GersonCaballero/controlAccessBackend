@@ -17,10 +17,63 @@ namespace ControlAccess.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("ControlAccess.Models.Accesos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CasaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TipoAcceso")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UsuarioId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VehiculoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VisitanteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CasaId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.HasIndex("VehiculoId");
+
+                    b.HasIndex("VisitanteId");
+
+                    b.ToTable("Accesos");
+                });
 
             modelBuilder.Entity("ControlAccess.Models.Avenidas", b =>
                 {
@@ -186,6 +239,58 @@ namespace ControlAccess.Migrations
                     b.ToTable("Casas");
                 });
 
+            modelBuilder.Entity("ControlAccess.Models.Incidencias", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CasaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CasaId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Incidencias");
+                });
+
             modelBuilder.Entity("ControlAccess.Models.Inmuebles", b =>
                 {
                     b.Property<int>("Id")
@@ -215,6 +320,51 @@ namespace ControlAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Inmuebles");
+                });
+
+            modelBuilder.Entity("ControlAccess.Models.Reportes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Contenido")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaHoraGeneracion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TipoReporte")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Reportes");
                 });
 
             modelBuilder.Entity("ControlAccess.Models.Residencial", b =>
@@ -390,6 +540,115 @@ namespace ControlAccess.Migrations
                     b.ToTable("Usuarios");
                 });
 
+            modelBuilder.Entity("ControlAccess.Models.Vehiculos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Modelo")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Placa")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Vehiculos");
+                });
+
+            modelBuilder.Entity("ControlAccess.Models.Visitantes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Apellido")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Motivo")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("NumeroIdentidad")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Observaciones")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Visitantes");
+                });
+
             modelBuilder.Entity("ControlAccess.Models.Zonas", b =>
                 {
                     b.Property<int>("Id")
@@ -425,6 +684,35 @@ namespace ControlAccess.Migrations
                     b.HasIndex("ResidencialId");
 
                     b.ToTable("Zonas");
+                });
+
+            modelBuilder.Entity("ControlAccess.Models.Accesos", b =>
+                {
+                    b.HasOne("ControlAccess.Models.Casas", "Casa")
+                        .WithMany()
+                        .HasForeignKey("CasaId");
+
+                    b.HasOne("ControlAccess.Models.Usuarios", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ControlAccess.Models.Vehiculos", "Vehiculo")
+                        .WithMany()
+                        .HasForeignKey("VehiculoId");
+
+                    b.HasOne("ControlAccess.Models.Visitantes", "Visitante")
+                        .WithMany()
+                        .HasForeignKey("VisitanteId");
+
+                    b.Navigation("Casa");
+
+                    b.Navigation("Usuario");
+
+                    b.Navigation("Vehiculo");
+
+                    b.Navigation("Visitante");
                 });
 
             modelBuilder.Entity("ControlAccess.Models.Avenidas", b =>
@@ -495,6 +783,30 @@ namespace ControlAccess.Migrations
                     b.Navigation("Zona");
                 });
 
+            modelBuilder.Entity("ControlAccess.Models.Incidencias", b =>
+                {
+                    b.HasOne("ControlAccess.Models.Casas", "Casa")
+                        .WithMany()
+                        .HasForeignKey("CasaId");
+
+                    b.HasOne("ControlAccess.Models.Usuarios", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+
+                    b.Navigation("Casa");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("ControlAccess.Models.Reportes", b =>
+                {
+                    b.HasOne("ControlAccess.Models.Usuarios", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("ControlAccess.Models.Tarifas", b =>
                 {
                     b.HasOne("ControlAccess.Models.Inmuebles", "Inmuebles")
@@ -527,6 +839,15 @@ namespace ControlAccess.Migrations
                     b.Navigation("Inmuebles");
 
                     b.Navigation("TipoUsuario");
+                });
+
+            modelBuilder.Entity("ControlAccess.Models.Vehiculos", b =>
+                {
+                    b.HasOne("ControlAccess.Models.Usuarios", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("ControlAccess.Models.Zonas", b =>

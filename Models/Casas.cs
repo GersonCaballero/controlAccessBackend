@@ -12,23 +12,23 @@ namespace ControlAccess.Models
         [StringLength(500)]
         public string name { get; set; }
         [Required]
-        
+
         // Nuevos campos de relación
         public int? IdZona { get; set; }
         [ForeignKey("IdZona")]
-        public Zonas Zona { get; set; }
+        public Zonas? Zona { get; set; }
 
         public int IdBloque { get; set; }
         [ForeignKey("IdBloque")]
-        public Bloque Bloque { get; set; }
+        public Bloque? Bloque { get; set; }
 
         public int IdCalle { get; set; }
         [ForeignKey("IdCalle")]
-        public Calles Calle { get; set; }
+        public Calles? Calle { get; set; }
 
         public int IdAvenida { get; set; }
         [ForeignKey("IdAvenida")]
-        public Avenidas Avenidas { get; set; }
+        public Avenidas? Avenidas { get; set; }
 
         // Campos de auditoría
         public string CreatedBy { get; set; }

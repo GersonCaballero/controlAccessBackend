@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\",
+  "WorkspaceRootPath": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\gerso\\onedrive\\escritorio\\pases de entrada\\controlaccess\\controllers\\residencialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:controllers\\residencialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\controllers\\callescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:controllers\\callescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\gerso\\onedrive\\escritorio\\pases de entrada\\controlaccess\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\models\\calles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:models\\calles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\gerso\\onedrive\\escritorio\\pases de entrada\\controlaccess\\models\\residencial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:models\\residencial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\models\\vehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:models\\vehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACYAAAAYAAAA",
+              "Title": "Calles.cs",
+              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Calles.cs",
+              "RelativeDocumentMoniker": "Models\\Calles.cs",
+              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Calles.cs",
+              "RelativeToolTip": "Models\\Calles.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T18:46:09.774Z",
+              "WhenOpened": "2024-08-16T21:29:10.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ResidencialsController.cs",
-              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\Controllers\\ResidencialsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ResidencialsController.cs",
-              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\Controllers\\ResidencialsController.cs",
-              "RelativeToolTip": "Controllers\\ResidencialsController.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAADwv40AAABPAAAA",
+              "Title": "CallesController.cs",
+              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\CallesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CallesController.cs",
+              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\CallesController.cs",
+              "RelativeToolTip": "Controllers\\CallesController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwEAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:31:03.593Z",
+              "WhenOpened": "2024-08-16T21:27:58.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Residencial.cs",
-              "DocumentMoniker": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\Models\\Residencial.cs",
-              "RelativeDocumentMoniker": "Models\\Residencial.cs",
-              "ToolTip": "C:\\Users\\gerso\\OneDrive\\Escritorio\\Pases de entrada\\ControlAccess\\Models\\Residencial.cs",
-              "RelativeToolTip": "Models\\Residencial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAArAAAA",
+              "Title": "Vehiculos.cs",
+              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Vehiculos.cs",
+              "RelativeDocumentMoniker": "Models\\Vehiculos.cs",
+              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Vehiculos.cs",
+              "RelativeToolTip": "Models\\Vehiculos.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T17:11:58.436Z",
+              "WhenOpened": "2024-08-16T08:08:37.085Z",
               "EditorCaption": ""
             }
           ]

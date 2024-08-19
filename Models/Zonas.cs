@@ -16,7 +16,7 @@ namespace ControlAccess.Models
         
         public int ResidencialId { get; set; }
         [ForeignKey("ResidencialId")]
-        public Residencial Residencial { get; set; }
+        public Residencial? Residencial { get; set; }
 
 
         // Campos de auditoría

@@ -22,8 +22,10 @@ namespace ControlAccess.Controllers
         // GET: Avenidas
         public async Task<IActionResult> Index()
         {
-            var controlAccessContext = _context.Avenidas.Include(a => a.Residencial);
-            return View(await controlAccessContext.ToListAsync());
+            var avenidas = await _context.Avenidas
+            .Include(a => a.Residencial) 
+            .ToListAsync();
+            return Ok(avenidas);
         }
 
         // GET: Avenidas/Details/5
@@ -42,7 +44,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(avenidas);
+            return Json(avenidas);
         }
 
         // GET: Avenidas/Create
@@ -56,21 +58,22 @@ namespace ControlAccess.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Avenidas avenidas)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([FromBody] Avenidas avenidas)
         {
+
             if (ModelState.IsValid)
             {
                 _context.Add(avenidas);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Avenidas Created successfuly" });
             }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", avenidas.ResidencialId);
-            return View(avenidas);
-        }
+            
+            return BadRequest(ModelState);
+        } 
 
-        // GET: Avenidas/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+            // GET: Avenidas/Edit/5
+            public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -86,16 +89,15 @@ namespace ControlAccess.Controllers
             return View(avenidas);
         }
 
-        // POST: Avenidas/Edit/5
+        // PUT: Avenidas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Avenidas avenidas)
+        [HttpPut]        
+        public async Task<IActionResult> Edit(int id, [FromBody] Avenidas avenidas)
         {
             if (id != avenidas.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de la Avenida.");
             }
 
             if (ModelState.IsValid)
@@ -116,10 +118,10 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Recidencial updated successfully" });
             }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", avenidas.ResidencialId);
-            return View(avenidas);
+            
+            return BadRequest(avenidas);
         }
 
         // GET: Avenidas/Delete/5
@@ -141,9 +143,8 @@ namespace ControlAccess.Controllers
             return View(avenidas);
         }
 
-        // POST: Avenidas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Avenidas/Delete/5
+        [HttpDelete, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var avenidas = await _context.Avenidas.FindAsync(id);
@@ -153,7 +154,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Avenida eliminada exitosamente"});
         }
 
         private bool AvenidasExists(int id)

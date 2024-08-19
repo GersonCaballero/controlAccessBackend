@@ -55,13 +55,14 @@ namespace ControlAccess.Controllers
             {
                 _context.Add(residencial);
                 await _context.SaveChangesAsync();
-                return Ok(new { message = "Residencial created successfully" });
+                return Ok(new { message = "Residencial Created successfuly" });
             }
+            
             return BadRequest(ModelState);
         }
 
-        // GET: Residencials/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+            // GET: Residencials/Edit/5
+            public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {

@@ -22,8 +22,8 @@ namespace ControlAccess.Controllers
         // GET: Tarifas
         public async Task<IActionResult> Index()
         {
-            var controlAccessContext = _context.Tarifas.Include(t => t.Inmuebles);
-            return View(await controlAccessContext.ToListAsync());
+            var tarifas = await _context.Tarifas.Include(t => t.Inmuebles).ToListAsync();
+            return Ok(tarifas);
         }
 
         // GET: Tarifas/Details/5
@@ -31,7 +31,7 @@ namespace ControlAccess.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return BadRequest(new { message = "El id proporcionado no coincide con el id de tarifas"});
             }
 
             var tarifas = await _context.Tarifas
@@ -42,7 +42,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(tarifas);
+            return Json(tarifas);
         }
 
         // GET: Tarifas/Create
@@ -55,18 +55,17 @@ namespace ControlAccess.Controllers
         // POST: Tarifas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdTipoInmueble,Monto,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Tarifas tarifas)
+        [HttpPost]        
+        public async Task<IActionResult> Create([FromBody] Tarifas tarifas)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(tarifas);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Tarifas created successfully"});
             }
-            ViewData["IdTipoInmueble"] = new SelectList(_context.Inmuebles, "Id", "CreatedBy", tarifas.IdTipoInmueble);
-            return View(tarifas);
+            
+            return BadRequest(ModelState);
         }
 
         // GET: Tarifas/Edit/5
@@ -86,16 +85,15 @@ namespace ControlAccess.Controllers
             return View(tarifas);
         }
 
-        // POST: Tarifas/Edit/5
+        // PUT: Tarifas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdTipoInmueble,Monto,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Tarifas tarifas)
+        [HttpPut]       
+        public async Task<IActionResult> Edit(int id, [FromBody] Tarifas tarifas)
         {
             if (id != tarifas.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de Tarifas");
             }
 
             if (ModelState.IsValid)
@@ -116,10 +114,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdTipoInmueble"] = new SelectList(_context.Inmuebles, "Id", "CreatedBy", tarifas.IdTipoInmueble);
-            return View(tarifas);
+                return Ok(new { message = "Tarifas Updated Successfully"});
+            }            
+            return BadRequest(tarifas);
         }
 
         // GET: Tarifas/Delete/5
@@ -141,9 +138,8 @@ namespace ControlAccess.Controllers
             return View(tarifas);
         }
 
-        // POST: Tarifas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Tarifas/Delete/5
+        [HttpDelete, ActionName("Delete")]        
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var tarifas = await _context.Tarifas.FindAsync(id);
@@ -153,7 +149,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Tarifas Eleminada exitosamente" });
         }
 
         private bool TarifasExists(int id)

@@ -7,16 +7,16 @@ namespace ControlAccess.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
 
+        [Required]
         [StringLength(500)]
         public string name { get; set; }
-        [Required]
-        
 
+        [Required]       
         public int ResidencialId { get; set; }
+
         [ForeignKey("ResidencialId")]
-        public Residencial Residencial { get; set; }
+        public Residencial? Residencial { get; set; }
 
 
         // Campos de auditoría

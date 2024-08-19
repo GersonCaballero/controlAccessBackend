@@ -22,8 +22,8 @@ namespace ControlAccess.Controllers
         // GET: Zonas
         public async Task<IActionResult> Index()
         {
-            var controlAccessContext = _context.Zonas.Include(z => z.Residencial);
-            return View(await controlAccessContext.ToListAsync());
+            var zonas = await _context.Zonas.Include(a => a.Residencial).ToListAsync();
+            return Ok(zonas);
         }
 
         // GET: Zonas/Details/5
@@ -42,7 +42,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(zonas);
+            return Json(zonas);
         }
 
         // GET: Zonas/Create
@@ -56,17 +56,16 @@ namespace ControlAccess.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Zonas zonas)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([FromBody] Zonas zonas)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(zonas);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", zonas.ResidencialId);
-            return View(zonas);
+                return Ok(new { message = "Zona created successfully"});
+            }            
+            return BadRequest(ModelState);
         }
 
         // GET: Zonas/Edit/5
@@ -86,16 +85,16 @@ namespace ControlAccess.Controllers
             return View(zonas);
         }
 
-        // POST: Zonas/Edit/5
+        // PUT: Zonas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Zonas zonas)
+        [HttpPut]
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [FromBody] Zonas zonas)
         {
             if (id != zonas.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de la zona.");
             }
 
             if (ModelState.IsValid)
@@ -116,10 +115,10 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new {message = "Zona updated successfuly"});
             }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", zonas.ResidencialId);
-            return View(zonas);
+            //ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", zonas.ResidencialId);
+            return BadRequest(zonas);
         }
 
         // GET: Zonas/Delete/5
@@ -141,9 +140,8 @@ namespace ControlAccess.Controllers
             return View(zonas);
         }
 
-        // POST: Zonas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Zonas/Delete/5
+        [HttpDelete, ActionName("Delete")]  
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var zonas = await _context.Zonas.FindAsync(id);
@@ -153,7 +151,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Zona eliminada exitosamente. "});
         }
 
         private bool ZonasExists(int id)

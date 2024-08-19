@@ -21,11 +21,11 @@ namespace ControlAccess.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            var controlAccessContext = _context.Usuarios
+            var usuarios = await _context.Usuarios
                 .Include(u => u.Casas)
                 .Include(u => u.Inmuebles)
-                .Include(u => u.TipoUsuario);
-            return View(await controlAccessContext.ToListAsync());
+                .Include(u => u.TipoUsuario).ToListAsync();
+            return Ok(usuarios);
         }
 
         // GET: Usuarios/Details/5
@@ -46,7 +46,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(usuarios);
+            return Json(usuarios);
         }
 
         // GET: Usuarios/Create
@@ -59,9 +59,8 @@ namespace ControlAccess.Controllers
         }
 
         // POST: Usuarios/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido,CorreoElectronico,NumeroCelular,NombreUsuario,Contrasena,IdTipoDeUsuario,IdCasa,IdInmueble,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Usuarios usuarios)
+        [HttpPost]        
+        public async Task<IActionResult> Create([FromBody] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {
@@ -70,12 +69,10 @@ namespace ControlAccess.Controllers
 
                 _context.Add(usuarios);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new {message = "Usuarios created successfully"});
             }
-            ViewData["IdCasa"] = new SelectList(_context.Casas, "Id", "name", usuarios.IdCasa);
-            ViewData["IdInmueble"] = new SelectList(_context.Inmuebles, "Id", "CreatedBy", usuarios.IdInmueble);
-            ViewData["IdTipoDeUsuario"] = new SelectList(_context.TipoUsuario, "Id", "CreatedBy", usuarios.IdTipoDeUsuario);
-            return View(usuarios);
+            
+            return BadRequest(ModelState);
         }
 
         // GET: Usuarios/Edit/5
@@ -97,14 +94,13 @@ namespace ControlAccess.Controllers
             return View(usuarios);
         }
 
-        // POST: Usuarios/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellido,CorreoElectronico,NumeroCelular,NombreUsuario,Contrasena,IdTipoDeUsuario,IdCasa,IdInmueble,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Usuarios usuarios)
+        // PUT: Usuarios/Edit/5
+        [HttpPut]        
+        public async Task<IActionResult> Edit(int id, [FromBody] Usuarios usuarios)
         {
             if (id != usuarios.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de Usuarios.");
             }
 
             if (ModelState.IsValid)
@@ -128,12 +124,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdCasa"] = new SelectList(_context.Casas, "Id", "name", usuarios.IdCasa);
-            ViewData["IdInmueble"] = new SelectList(_context.Inmuebles, "Id", "CreatedBy", usuarios.IdInmueble);
-            ViewData["IdTipoDeUsuario"] = new SelectList(_context.TipoUsuario, "Id", "CreatedBy", usuarios.IdTipoDeUsuario);
-            return View(usuarios);
+                return Ok(new { message = "Usuarios Updated successfully" });
+            }           
+            return BadRequest(usuarios);
         }
 
         // GET: Usuarios/Delete/5
@@ -157,9 +150,8 @@ namespace ControlAccess.Controllers
             return View(usuarios);
         }
 
-        // POST: Usuarios/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Usuarios/Delete/5
+        [HttpDelete, ActionName("Delete")]        
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var usuarios = await _context.Usuarios.FindAsync(id);
@@ -169,7 +161,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Usuarios eliminado exitosamente." });
         }
 
         private bool UsuariosExists(int id)

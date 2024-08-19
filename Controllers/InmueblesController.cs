@@ -22,7 +22,8 @@ namespace ControlAccess.Controllers
         // GET: Inmuebles
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Inmuebles.ToListAsync());
+            var inmuebles = await _context.Inmuebles.ToListAsync();
+            return Ok(inmuebles);
         }
 
         // GET: Inmuebles/Details/5
@@ -40,7 +41,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(inmuebles);
+            return Json(inmuebles);
         }
 
         // GET: Inmuebles/Create
@@ -52,17 +53,16 @@ namespace ControlAccess.Controllers
         // POST: Inmuebles/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Inmuebles inmuebles)
+        [HttpPost]      
+        public async Task<IActionResult> Create([FromBody] Inmuebles inmuebles)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(inmuebles);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new {message = "Inmuebles created successfully"});
             }
-            return View(inmuebles);
+            return BadRequest(ModelState);
         }
 
         // GET: Inmuebles/Edit/5
@@ -81,12 +81,11 @@ namespace ControlAccess.Controllers
             return View(inmuebles);
         }
 
-        // POST: Inmuebles/Edit/5
+        // PUT: Inmuebles/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Inmuebles inmuebles)
+        [HttpPut]        
+        public async Task<IActionResult> Edit(int id, [FromBody] Inmuebles inmuebles)
         {
             if (id != inmuebles.Id)
             {
@@ -111,9 +110,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Inmueble updated successfully" });
             }
-            return View(inmuebles);
+            return BadRequest(inmuebles);
         }
 
         // GET: Inmuebles/Delete/5
@@ -134,8 +133,8 @@ namespace ControlAccess.Controllers
             return View(inmuebles);
         }
 
-        // POST: Inmuebles/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // DELETE: Inmuebles/Delete/5
+        [HttpDelete, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -146,7 +145,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Inmueble eliminada exitosamente." });
         }
 
         private bool InmueblesExists(int id)

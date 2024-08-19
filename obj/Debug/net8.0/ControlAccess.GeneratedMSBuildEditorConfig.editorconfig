@@ -17,239 +17,339 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ControlAccess
 build_property.RootNamespace = ControlAccess
-build_property.ProjectDir = C:\Users\gerso\OneDrive\Escritorio\Pases de entrada\ControlAccess\
+build_property.ProjectDir = C:\Users\lsgr0\OneDrive\Escritorio\Proyecto-practica\ejemplo\controlAccessBackend\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gerso\OneDrive\Escritorio\Pases de entrada\ControlAccess
+build_property.MSBuildProjectDirectory = C:\Users\lsgr0\OneDrive\Escritorio\Proyecto-practica\ejemplo\controlAccessBackend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Avenidas/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Accesos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Accesos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Accesos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Accesos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Accesos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Avenidas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZlbmlkYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Avenidas/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Avenidas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZlbmlkYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Avenidas/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Avenidas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZlbmlkYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Avenidas/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Avenidas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZlbmlkYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Avenidas/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Avenidas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZlbmlkYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Bloques/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Bloques/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvcXVlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Bloques/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Bloques/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvcXVlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Bloques/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Bloques/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvcXVlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Bloques/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Bloques/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvcXVlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Bloques/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Bloques/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvcXVlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Calles/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Calles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Calles/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Calles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Calles/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Calles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Calles/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Calles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Calles/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Calles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsbGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Casas/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Casas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Casas/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Casas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Casas/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Casas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Casas/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Casas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Casas/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Casas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Home/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Home/Privacy.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Inmuebles/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Incidencias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Incidencias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Incidencias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Incidencias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Incidencias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5jaWRlbmNpYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Inmuebles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Inmuebles/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Inmuebles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Inmuebles/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Inmuebles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Inmuebles/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Inmuebles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Inmuebles/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Inmuebles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Residencials/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Reportes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Reportes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Reportes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Reportes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Reportes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Residencials/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzaWRlbmNpYWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Residencials/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Residencials/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzaWRlbmNpYWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Residencials/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Residencials/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzaWRlbmNpYWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Residencials/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Residencials/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzaWRlbmNpYWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Residencials/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Residencials/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzaWRlbmNpYWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Shared/Error.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Tarifas/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Tarifas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyaWZhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Tarifas/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Tarifas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyaWZhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Tarifas/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Tarifas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyaWZhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Tarifas/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Tarifas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyaWZhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Tarifas/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Tarifas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyaWZhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/TipoUsuarios/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/TipoUsuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1VzdWFyaW9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/TipoUsuarios/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/TipoUsuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1VzdWFyaW9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/TipoUsuarios/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/TipoUsuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1VzdWFyaW9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/TipoUsuarios/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/TipoUsuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1VzdWFyaW9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/TipoUsuarios/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/TipoUsuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb1VzdWFyaW9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Usuarios/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Usuarios/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Usuarios/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Usuarios/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Usuarios/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Zonas/Create.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Vehiculos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Vehiculos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Vehiculos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Vehiculos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Vehiculos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWN1bG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Visitantes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRhbnRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Visitantes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRhbnRlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Visitantes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRhbnRlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Visitantes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRhbnRlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Visitantes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRhbnRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Zonas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm9uYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Zonas/Delete.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Zonas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm9uYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Zonas/Details.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Zonas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm9uYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Zonas/Edit.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Zonas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm9uYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Zonas/Index.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Zonas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm9uYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/_ViewImports.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/_ViewStart.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gerso/OneDrive/Escritorio/Pases de entrada/ControlAccess/Views/Shared/_Layout.cshtml]
+[C:/Users/lsgr0/OneDrive/Escritorio/Proyecto-practica/ejemplo/controlAccessBackend/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wafrjrnb9v

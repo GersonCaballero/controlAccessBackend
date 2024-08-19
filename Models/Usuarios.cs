@@ -38,17 +38,17 @@ namespace ControlAccess.Models
         public int IdTipoDeUsuario { get; set; }
 
         [ForeignKey("IdTipoDeUsuario")]
-        public TipoUsuario TipoUsuario { get; set; }
+        public TipoUsuario? TipoUsuario { get; set; }
 
         public int? IdCasa { get; set; }
 
         [ForeignKey("IdCasa")]
-        public Casas Casas { get; set; }
+        public Casas? Casas { get; set; }
 
         public int? IdInmueble { get; set; }
 
         [ForeignKey("IdInmueble")]
-        public Inmuebles Inmuebles { get; set; }
+        public Inmuebles? Inmuebles { get; set; }
 
         // Campos de auditoría
       

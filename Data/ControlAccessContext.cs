@@ -24,5 +24,10 @@ namespace ControlAccess.Data
         public DbSet<ControlAccess.Models.TipoUsuario> TipoUsuario { get; set; } = default!;
         public DbSet<ControlAccess.Models.Usuarios> Usuarios { get; set; } = default!;
         public DbSet<ControlAccess.Models.Tarifas> Tarifas { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Visitantes> Visitantes { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Vehiculos> Vehiculos { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Reportes> Reportes { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Incidencias> Incidencias { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Accesos> Accesos { get; set; } = default!;
     }
 }

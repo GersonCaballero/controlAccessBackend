@@ -21,9 +21,9 @@ namespace ControlAccess.Controllers
 
         // GET: Calles
         public async Task<IActionResult> Index()
-        {
-            var controlAccessContext = _context.Calles.Include(c => c.Residencial);
-            return View(await controlAccessContext.ToListAsync());
+        {            
+            var calles = await _context.Calles.Include(c => c.Residencial).ToListAsync();
+            return Ok(calles);
         }
 
         // GET: Calles/Details/5
@@ -42,7 +42,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(calles);
+            return Json(calles);
         }
 
         // GET: Calles/Create
@@ -55,18 +55,16 @@ namespace ControlAccess.Controllers
         // POST: Calles/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Calles calles)
+        [HttpPost]      
+        public async Task<IActionResult> Create([FromBody] Calles calles)
         {
             if (ModelState.IsValid)
-            {
+            {                
                 _context.Add(calles);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", calles.ResidencialId);
-            return View(calles);
+                return Ok(new { message = "Calles crated successfully" });
+            }           
+            return BadRequest(ModelState);
         }
 
         // GET: Calles/Edit/5
@@ -86,22 +84,22 @@ namespace ControlAccess.Controllers
             return View(calles);
         }
 
-        // POST: Calles/Edit/5
+        // PUT: Calles/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,ResidencialId,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Calles calles)
+        [HttpPut]        
+        public async Task<IActionResult> Edit(int id, [FromBody] Calles calles)
         {
             if (id != calles.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de la calle.");
             }
 
             if (ModelState.IsValid)
             {
                 try
                 {
+                    calles.UpdatedDate = DateTime.Now;
                     _context.Update(calles);
                     await _context.SaveChangesAsync();
                 }
@@ -116,10 +114,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ResidencialId"] = new SelectList(_context.Residencial, "Id", "address", calles.ResidencialId);
-            return View(calles);
+                return Ok(new { message = "Calle Updated successfully" });
+            }            
+            return BadRequest(calles);
         }
 
         // GET: Calles/Delete/5
@@ -141,9 +138,8 @@ namespace ControlAccess.Controllers
             return View(calles);
         }
 
-        // POST: Calles/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Calles/Delete/5
+        [HttpDelete, ActionName("Delete")]        
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var calles = await _context.Calles.FindAsync(id);
@@ -153,7 +149,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Calle Eliminda exitosamente."});
         }
 
         private bool CallesExists(int id)

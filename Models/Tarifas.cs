@@ -12,9 +12,10 @@ namespace ControlAccess.Models
         [ForeignKey("Inmuebles")]
         public int IdTipoInmueble { get; set; }
         [ForeignKey("IdTipoInmueble") ]
-        public Inmuebles Inmuebles { get; set; }
+        public Inmuebles? Inmuebles { get; set; }
 
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Monto { get; set; }
 
         // Campos de auditoría
