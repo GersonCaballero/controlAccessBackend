@@ -15,5 +15,14 @@ namespace ControlAccess.Data
         }
 
         public DbSet<ControlAccess.Models.Residencial> Residencial { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Zonas> Zonas { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Casas> Casas { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Calles> Calles { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Avenidas> Avenidas { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Bloque> Bloque { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Inmuebles> Inmuebles { get; set; } = default!;
+        public DbSet<ControlAccess.Models.TipoUsuario> TipoUsuario { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Usuarios> Usuarios { get; set; } = default!;
+        public DbSet<ControlAccess.Models.Tarifas> Tarifas { get; set; } = default!;
     }
 }

@@ -17,7 +17,8 @@ namespace ControlAccess.Controllers
         // GET: Residencials
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Residencial.ToListAsync());
+            var residenciales = await _context.Residencial.ToListAsync();
+            return Ok(residenciales);  // Asegúrate de que esto esté devolviendo una lista de objetos correctamente serializados
         }
 
         // GET: Residencials/Details/5
@@ -35,7 +36,7 @@ namespace ControlAccess.Controllers
                 return NotFound();
             }
 
-            return View(residencial);
+            return Json(residencial);
         }
 
         // GET: Residencials/Create
@@ -48,16 +49,15 @@ namespace ControlAccess.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,name,address,imageUrl")] Residencial residencial)
+        public async Task<IActionResult> Create([FromBody] Residencial residencial)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(residencial);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Residencial created successfully" });
             }
-            return View(residencial);
+            return BadRequest(ModelState);
         }
 
         // GET: Residencials/Edit/5
@@ -76,16 +76,15 @@ namespace ControlAccess.Controllers
             return View(residencial);
         }
 
-        // POST: Residencials/Edit/5
+        // PUT: Residencials/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,name,address,imageUrl")] Residencial residencial)
+        [HttpPut]
+        public async Task<IActionResult> Edit(int id, [FromBody] Residencial residencial)
         {
             if (id != residencial.Id)
             {
-                return NotFound();
+                return BadRequest("El id brindado no coincide con el id de la residencial.");
             }
 
             if (ModelState.IsValid)
@@ -106,9 +105,9 @@ namespace ControlAccess.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(new { message = "Residencial updated successfully" });
             }
-            return View(residencial);
+            return BadRequest(residencial);
         }
 
         // GET: Residencials/Delete/5
@@ -129,9 +128,8 @@ namespace ControlAccess.Controllers
             return View(residencial);
         }
 
-        // POST: Residencials/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // DELETE: Residencials/Delete/5
+        [HttpDelete, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var residencial = await _context.Residencial.FindAsync(id);
@@ -141,7 +139,7 @@ namespace ControlAccess.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok(new { message = "Residencial eliminada exitosamente." });
         }
 
         private bool ResidencialExists(int id)
