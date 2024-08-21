@@ -30,7 +30,7 @@ namespace ControlAccess.Models
         public string NombreUsuario { get; set; }
 
         [Required]
-        [StringLength(50)] 
+        [StringLength(500)] 
         public string Contrasena { get; set; }
 
         // Campos relacionados
@@ -52,12 +52,12 @@ namespace ControlAccess.Models
 
         // Campos de auditoría
       
-        public string CreatedBy { get; set; }
+        public string? CreatedBy { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
        
-        public string UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
 
         public DateTime UpdatedDate { get; set; }
     }

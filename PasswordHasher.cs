@@ -1,6 +1,4 @@
-﻿// File: PasswordHasher.cs
-
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -34,7 +32,6 @@ namespace MvcCoreUtilidades.Helpers
 
             byte[] salida;
             UnicodeEncoding encoding = new UnicodeEncoding();
-
             salida = encoding.GetBytes(contenidosalt);
 
             SHA256Managed sHA256 = new SHA256Managed();
@@ -45,8 +42,14 @@ namespace MvcCoreUtilidades.Helpers
             }
 
             sHA256.Clear();
-            string resultado = encoding.GetString(salida);
-            return resultado;
+            StringBuilder resultado = new StringBuilder();
+            foreach (byte b in salida)
+            {
+                resultado.Append(b.ToString("X2"));
+            }
+
+            // Truncar la cadena resultante a los primeros 16 caracteres
+            return resultado.ToString().Substring(0, 25);
         }
 
         public static string EncriptarContrasena(string contrasena)

@@ -9,10 +9,10 @@ namespace ControlAccess.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string CreatedBy { get; set; }
+        public string? CreatedBy { get; set; }
         [Required]
-        public DateTime CreatedDate { get; set; }
-        public string UpdatedBy { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public string? UpdatedBy { get; set; }
         public DateTime UpdatedDate { get; set; }
         
     }

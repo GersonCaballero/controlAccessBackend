@@ -99,6 +99,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    bloque.UpdatedDate = DateTime.Now;
                     _context.Update(bloque);
                     await _context.SaveChangesAsync();
                 }

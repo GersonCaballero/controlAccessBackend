@@ -110,6 +110,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    accesos.UpdatedDate = DateTime.Now;
                     _context.Update(accesos);
                     await _context.SaveChangesAsync();
                 }

@@ -96,6 +96,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    visitantes.UpdatedDate = DateTime.Now;
                     _context.Update(visitantes);
                     await _context.SaveChangesAsync();
                 }

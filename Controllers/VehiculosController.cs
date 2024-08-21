@@ -63,7 +63,7 @@ namespace ControlAccess.Controllers
             {
                 _context.Add(vehiculos);
                 await _context.SaveChangesAsync();
-                return Ok("Vehiculo creado exitosamente.");
+                return Ok(new { message = "Vehiculo creado exitosamente" });
             }            
             return BadRequest(ModelState);
         }
@@ -100,6 +100,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    vehiculos.UpdatedDate = DateTime.Now;
                     _context.Update(vehiculos);
                     await _context.SaveChangesAsync();
                 }

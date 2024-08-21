@@ -101,6 +101,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    zonas.UpdatedDate = DateTime.Now;
                     _context.Update(zonas);
                     await _context.SaveChangesAsync();
                 }

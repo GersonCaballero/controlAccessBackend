@@ -104,6 +104,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    avenidas.UpdatedDate = DateTime.Now;
                     _context.Update(avenidas);
                     await _context.SaveChangesAsync();
                 }

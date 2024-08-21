@@ -96,6 +96,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    tipoUsuario.UpdatedDate = DateTime.Now;
                     _context.Update(tipoUsuario);
                     await _context.SaveChangesAsync();
                 }

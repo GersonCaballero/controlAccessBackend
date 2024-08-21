@@ -100,6 +100,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    tarifas.UpdatedDate = DateTime.Now;
                     _context.Update(tarifas);
                     await _context.SaveChangesAsync();
                 }

@@ -113,6 +113,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    casas.UpdatedDate = DateTime.Now;
                     _context.Update(casas);
                     await _context.SaveChangesAsync();
                 }

@@ -4,6 +4,7 @@ using ControlAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControlAccess.Migrations
 {
     [DbContext(typeof(ControlAccessContext))]
-    partial class ControlAccessContextModelSnapshot : ModelSnapshot
+    [Migration("20240820040826_opcinal_date-pasword_latino")]
+    partial class opcinal_datepasword_latino
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -465,8 +468,8 @@ namespace ControlAccess.Migrations
 
                     b.Property<string>("Contrasena")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("CorreoElectronico")
                         .IsRequired()
@@ -474,6 +477,7 @@ namespace ControlAccess.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("CreatedBy")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
@@ -504,6 +508,7 @@ namespace ControlAccess.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("UpdatedBy")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedDate")

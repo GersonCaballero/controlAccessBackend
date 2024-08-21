@@ -18,14 +18,12 @@ namespace ControlAccess.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Monto { get; set; }
 
-        // Campos de auditoría
-        [Required]
-        public string CreatedBy { get; set; }
+        // Campos de auditoría        
+        public string? CreatedBy { get; set; }
+        
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        [Required]
-        public DateTime CreatedDate { get; set; }
-
-        public string UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
         public DateTime UpdatedDate { get; set; }
     }
 }

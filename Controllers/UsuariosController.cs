@@ -109,7 +109,7 @@ namespace ControlAccess.Controllers
                 {
                     // Encriptar la contraseña antes de guardarla
                     usuarios.Contrasena = HelperCryptography.EncriptarContrasena(usuarios.Contrasena);
-
+                    usuarios.UpdatedDate = DateTime.Now;
                     _context.Update(usuarios);
                     await _context.SaveChangesAsync();
                 }

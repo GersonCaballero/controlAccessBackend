@@ -57,12 +57,12 @@ namespace ControlAccess.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]      
         public async Task<IActionResult> Create([FromBody] Calles calles)
-        {
+                {
             if (ModelState.IsValid)
             {                
                 _context.Add(calles);
                 await _context.SaveChangesAsync();
-                return Ok(new { message = "Calles crated successfully" });
+                return Ok(new { message = "Calles created successfully" });
             }           
             return BadRequest(ModelState);
         }

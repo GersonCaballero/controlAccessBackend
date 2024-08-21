@@ -64,7 +64,7 @@ namespace ControlAccess.Controllers
             {
                 _context.Add(incidencias);
                 await _context.SaveChangesAsync();
-                return Ok("Incidencia creada exitosamente.");
+                return Ok(new { message = "Avenidas Created successfuly" });
             }
             
             return BadRequest(ModelState);
@@ -103,6 +103,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    incidencias.UpdatedDate = DateTime.Now;
                     _context.Update(incidencias);
                     await _context.SaveChangesAsync();
                 }

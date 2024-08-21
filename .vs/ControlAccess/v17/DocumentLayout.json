@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\controllers\\callescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:controllers\\callescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\controllers\\accesoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:controllers\\accesoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\models\\calles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:models\\calles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\models\\accesos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:models\\accesos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\models\\vehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:models\\vehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|c:\\users\\lsgr0\\onedrive\\escritorio\\proyecto-practica\\ejemplo\\controlaccessbackend\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F93B498-AB30-46EB-84F4-0AA6AAADD78C}|ControlAccess.csproj|solutionrelative:controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Calles.cs",
-              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Calles.cs",
-              "RelativeDocumentMoniker": "Models\\Calles.cs",
-              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Calles.cs",
-              "RelativeToolTip": "Models\\Calles.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBcAAABBAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AccesosController.cs",
+              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\AccesosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccesosController.cs",
+              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\AccesosController.cs",
+              "RelativeToolTip": "Controllers\\AccesosController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwE0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T21:29:10.498Z",
+              "WhenOpened": "2024-08-21T00:23:58.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CallesController.cs",
-              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\CallesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CallesController.cs",
-              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\CallesController.cs",
-              "RelativeToolTip": "Controllers\\CallesController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAkwEAAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Accesos.cs",
+              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Accesos.cs",
+              "RelativeDocumentMoniker": "Models\\Accesos.cs",
+              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Accesos.cs",
+              "RelativeToolTip": "Models\\Accesos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T21:27:58.959Z",
+              "WhenOpened": "2024-08-21T03:31:35.172Z",
               "EditorCaption": ""
             },
             {
@@ -58,9 +62,22 @@
               "RelativeDocumentMoniker": "Models\\Vehiculos.cs",
               "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Models\\Vehiculos.cs",
               "RelativeToolTip": "Models\\Vehiculos.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB8AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T08:08:37.085Z",
+              "WhenOpened": "2024-08-21T03:16:08.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\lsgr0\\OneDrive\\Escritorio\\Proyecto-practica\\ejemplo\\controlAccessBackend\\Controllers\\VehiculosController.cs",
+              "RelativeToolTip": "Controllers\\VehiculosController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T00:23:10.233Z",
               "EditorCaption": ""
             }
           ]

@@ -96,6 +96,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    inmuebles.UpdatedDate = DateTime.Now;
                     _context.Update(inmuebles);
                     await _context.SaveChangesAsync();
                 }
@@ -135,7 +136,6 @@ namespace ControlAccess.Controllers
 
         // DELETE: Inmuebles/Delete/5
         [HttpDelete, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var inmuebles = await _context.Inmuebles.FindAsync(id);

@@ -100,6 +100,7 @@ namespace ControlAccess.Controllers
             {
                 try
                 {
+                    reportes.UpdatedDate = DateTime.Now;
                     _context.Update(reportes);
                     await _context.SaveChangesAsync();
                 }
